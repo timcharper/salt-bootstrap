@@ -2379,8 +2379,8 @@ install_debian_8_deps() {
     fi
 
     # Saltstack's Stable Debian repository
-    if [ "$(grep -R 'latest jessie main' /etc/apt)" = "" ]; then
-        echo "deb http://repo.saltstack.com/apt/debian/latest jessie main" >> \
+    if [ "$(grep -R 'debian jessie-saltstack main' /etc/apt)" = "" ]; then
+        echo "deb http://debian.saltstack.com/debian jessie-saltstack main" >> \
             /etc/apt/sources.list.d/saltstack.list
     fi
 
